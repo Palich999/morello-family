@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Morello Family</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050403;--gold:#d7a955;--gold2:#ffd88c;--red:#8d160e;--red2:#cc2b1e;--line:rgba(215,169,85,.42);--text:#ead6ad;--muted:#bfa77c;--panel:rgba(8,7,6,.78)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 80% 0%,#321006 0,#080604 42%,#030303 100%);color:var(--text);font-family:'Roboto Slab',serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:42px 42px;z-index:10}
+.smoke,.ash{position:fixed;inset:-10%;pointer-events:none;z-index:1}.smoke{background:radial-gradient(circle at 20% 70%,rgba(255,210,130,.08),transparent 25%),radial-gradient(circle at 80% 30%,rgba(255,255,255,.06),transparent 30%);filter:blur(18px);animation:smoke 17s ease-in-out infinite alternate}.ash{background-image:radial-gradient(circle,rgba(255,195,86,.55) 0 1px,transparent 2px);background-size:90px 90px;opacity:.22;animation:ash 22s linear infinite}@keyframes smoke{to{transform:translate3d(5%,-3%,0) scale(1.08)}}@keyframes ash{to{transform:translateY(-140px)}}
+.page{position:relative;z-index:2;width:min(1500px,96vw);margin:12px auto 36px}.nav{position:sticky;top:8px;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 22px;border:1px solid var(--line);border-radius:20px;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);box-shadow:0 14px 45px rgba(0,0,0,.5)}.brand{display:flex;align-items:center;gap:14px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:4px;font-size:28px;color:#f3cf85}.brand-mark{font-size:42px;line-height:1;color:#d79a3b;text-shadow:0 0 18px rgba(255,185,75,.45)}.links{display:flex;gap:14px;flex-wrap:wrap}.links a,.btn{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:2px;text-decoration:none;color:#f2d28c;border:1px solid var(--line);border-radius:999px;padding:11px 22px;background:rgba(0,0,0,.45);transition:.2s}.links a:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 0 22px rgba(215,169,85,.3);color:#fff0bf}.hero{position:relative;min-height:835px;border:1px solid var(--line);border-radius:20px;margin-top:10px;overflow:hidden;background:#050403;box-shadow:0 30px 90px rgba(0,0,0,.75)}.hero-bg{position:absolute;inset:0;background:url('assets/hero.png') center top/cover no-repeat;animation:slowzoom 20s ease-in-out infinite alternate;filter:saturate(1.06) contrast(1.02)}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,transparent 0 40%,rgba(0,0,0,.22) 61%,rgba(0,0,0,.74) 100%),linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.5) 82%,rgba(0,0,0,.92))}@keyframes slowzoom{to{transform:scale(1.035)}}
+.slogan-panel{position:absolute;z-index:3;left:28px;top:285px;width:min(380px,84vw);padding:24px 28px;border:1px solid var(--line);border-radius:16px;background:rgba(0,0,0,.52);box-shadow:inset 0 0 45px rgba(215,169,85,.06),0 22px 60px rgba(0,0,0,.55);backdrop-filter:blur(4px)}.srow{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:center;margin:18px 0}.ico{font-size:31px;color:var(--gold2);filter:drop-shadow(0 0 8px rgba(255,200,95,.35))}.srow b{color:#f1cd81}.hero-cards{position:absolute;z-index:3;left:38px;right:38px;bottom:100px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.hcard,.card{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(15,12,9,.88),rgba(5,5,4,.86));box-shadow:inset 0 0 35px rgba(215,169,85,.05),0 16px 48px rgba(0,0,0,.35)}.hcard{padding:24px 28px;display:grid;grid-template-columns:62px 1fr;gap:16px;align-items:center}.hcard .bigico{font-size:42px;color:var(--gold)}h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:4px;color:#e7b965;margin:0 0 12px}.hero-actions{position:absolute;z-index:4;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:18px}.btn.red{background:linear-gradient(180deg,#a52217,#5a0b07);border-color:#d2392a;color:#ffe2ad}.btn.big{font-size:22px;padding:16px 38px}.section{margin-top:18px;display:grid;gap:18px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:26px}.about p{line-height:1.75;margin:0;color:#ddc69e}.ranks{display:grid;gap:8px}.rank{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid rgba(215,169,85,.18)}.rank span:first-child{font-family:'Oswald';color:#ffd37b;font-size:22px}.promo{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center}.promo img{width:100%;max-height:360px;object-fit:contain;filter:drop-shadow(0 0 30px rgba(255,176,44,.18))}.empty-gallery{min-height:210px;display:grid;place-items:center;text-align:center;border:1px dashed rgba(215,169,85,.45);border-radius:18px;background:rgba(0,0,0,.35);color:#bfa77c}.req li{margin:12px 0}.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-family:'Oswald';letter-spacing:1.5px;color:#e8c47e}input,textarea{width:100%;border:1px solid rgba(215,169,85,.38);border-radius:10px;background:#090807;color:#f5ddb2;padding:13px 14px;font:16px 'Roboto Slab',serif;outline:none}textarea{min-height:110px;resize:vertical}input:focus,textarea:focus{border-color:#ffd38a;box-shadow:0 0 0 3px rgba(215,169,85,.12)}.filebox{border:1px dashed rgba(215,169,85,.55);border-radius:12px;padding:16px;background:rgba(0,0,0,.26)}.note{font-size:14px;color:#bda47c;line-height:1.6}.status{margin-top:12px;color:#ffd38a;min-height:24px}.footer{text-align:center;color:#9d855d;padding:26px}.hidden-field{position:absolute;left:-9999px;opacity:0}
+@media(max-width:950px){.nav{position:relative;flex-direction:column}.links{justify-content:center}.hero{min-height:760px}.slogan-panel{left:16px;right:16px;top:230px;width:auto}.hero-cards{grid-template-columns:1fr;bottom:120px;left:16px;right:16px}.hcard{padding:14px}.grid2,.grid3,.form,.promo{grid-template-columns:1fr}.hero-actions{bottom:20px;flex-direction:column;width:86%;}.btn.big{text-align:center;font-size:18px}.brand{font-size:22px}.hero-bg{background-position:center top}}
+@media(max-width:620px){.hero{min-height:880px}.slogan-panel{top:210px}.hero-cards{bottom:150px}.links a{padding:9px 14px;font-size:14px}.page{width:98vw}.card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="smoke"></div><div class="ash"></div>
+<main class="page">
+<nav class="nav">
+  <div class="brand"><div class="brand-mark">M</div><div>Morello Family</div></div>
+  <div class="links"><a href="#about">О нас</a><a href="#ranks">Ранги</a><a href="#promo">Промокод</a><a href="#form">Анкета</a><a href="https://discord.gg/SRJ3Rrqw5" target="_blank">Discord</a></div>
+</nav>
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="slogan-panel">
+    <div class="srow"><div class="ico">🤝</div><div><b>Рядом с теми,</b><br>кто прикроет тебя не только на словах.</div></div>
+    <div class="srow"><div class="ico">♞</div><div><b>Совместный путь.</b><br>Общий успех.</div></div>
+    <div class="srow"><div class="ico">♚</div><div><b>Одна семья.</b></div></div>
+  </div>
+  <div class="hero-cards">
+    <div class="hcard"><div class="bigico">◎</div><div><h3>Наша цель</h3><p>Создать сильную RP организацию и общий движ для развития.</p></div></div>
+    <div class="hcard"><div class="bigico">★</div><div><h3>Цель</h3><p>Собрать верный состав и стать ТОП-1 организацией на сервере.</p></div></div>
+    <div class="hcard"><div class="bigico">♛</div><div><h3>Путь наверх</h3><p>В планах — войны семей, лидерки гос/крайм фракций и влияние на сервере.</p></div></div>
+  </div>
+  <div class="hero-actions"><a class="btn red big" href="#form">▣ Подать заявку</a><a class="btn big" href="https://discord.gg/SRJ3Rrqw5" target="_blank">☻ Наш Discord</a></div>
+</section>
+<section class="section grid2" id="about">
+ <div class="card about"><h2>О семье Morello</h2><p>MORELLO — это не просто семья. Это объединение игроков, которые пришли не на пару дней, а строить сильную организацию с настоящим составом, взаимопомощью и общей целью.<br><br>Совместный фарм, выполнение контрактов, BP, участие в войнах семей, выход во фракции и борьба за лидерские позиции — всё это только начало пути Morello.</p></div>
+ <div class="card"><h2>Что получает участник</h2><ul class="req"><li>Поддержку и помощь от состава</li><li>Совместный фарм, контракты и заработок</li><li>Премии за актив</li><li>Общение и активный коллектив</li><li>Рост внутри организации и помощь с фракциями</li></ul></div>
+</section>
+<section class="section grid2">
+ <div class="card" id="ranks"><h2>Ранги семьи</h2><div class="ranks"><div class="rank"><span>7</span><span>Boss</span></div><div class="rank"><span>6</span><span>Underboss</span></div><div class="rank"><span>5</span><span>Consigliere</span></div><div class="rank"><span>4</span><span>Capo</span></div><div class="rank"><span>3</span><span>Soldier</span></div><div class="rank"><span>2</span><span>Associate</span></div><div class="rank"><span>1</span><span>Gangster</span></div></div></div>
+ <div class="card" id="promo"><h2>Промокод</h2><div class="promo"><img src="assets/promo.png" alt="Промокод PALICH"><div><h3>Реферальный код: PALICH</h3><p>Используй промокод при старте на GTA5RP и получай бонусы для быстрого развития.</p></div></div></div>
+</section>
+<section class="section" id="gallery"><div class="card"><h2>Галерея</h2><div class="empty-gallery"><div><h3>Скриншоты появятся позже</h3><p>Когда состав подрастёт, сюда можно добавить реальные фото семьи, сборов, контрактов и мероприятий.</p></div></div></div></section>
+<section class="section grid2">
+ <div class="card"><h2>Требования</h2><ul class="req"><li>Возраст желательно 20+ (возможны исключения)</li><li>Адекватность и умение общаться</li><li>Хорошее знание RP и правил сервера</li><li>Онлайн от 2 часов в день</li><li>Желание играть и развиваться вместе с семьёй</li></ul></div>
+ <div class="card"><h2>Почему Morello</h2><p class="note">Мы строим стабильный состав, а не набор на пару дней. Здесь ценят уважение, актив, помощь и желание двигаться вместе. В Morello нет места токсичности, крысам и людям, которые приходят только ради выгоды.</p></div>
+</section>
+<section class="section" id="form"><div class="card"><h2>Анкета на вступление</h2><form class="form" id="joinForm" enctype="multipart/form-data">
+<input class="hidden-field" name="website" tabindex="-1" autocomplete="off">
+<div class="field"><label>Имя IRL / ник в игре *</label><input name="name" maxlength="60" required></div>
+<div class="field"><label>Возраст *</label><input name="age" maxlength="20" required></div>
+<div class="field"><label>Discord / Telegram *</label><input name="contact" maxlength="80" required></div>
+<div class="field"><label>Уровень персонажа *</label><input name="level" maxlength="80" required></div>
+<div class="field full"><label>Перки и уровни</label><textarea name="perks" maxlength="1200" placeholder="Можно написать вручную или прикрепить скриншоты ниже"></textarea></div>
+<div class="field"><label>Средний онлайн в день *</label><input name="online" maxlength="60" required></div>
+<div class="field"><label>Опыт RP *</label><input name="rp" maxlength="180" required></div>
+<div class="field full"><label>Почему хочешь в Morello? *</label><textarea name="reason" maxlength="1500" required></textarea></div>
+<div class="field full filebox"><label>Скриншоты перков / персонажа</label><input type="file" name="screenshots" id="screenshots" accept="image/png,image/jpeg,image/webp" multiple><div class="note">Можно добавить до 3 картинок. Так не придётся вручную расписывать каждый перк и уровень.</div><div class="note" id="fileInfo"></div></div>
+<div class="field full"><button class="btn red big" type="submit">Отправить заявку</button><div class="status" id="status"></div></div>
+</form></div></section>
+<footer class="footer">Morello Family © GTA5RP community page</footer>
+</main>
+<script>
+const WORKER_URL = 'https://morello-applications.zosimov9706.workers.dev';
+let lastSent = Number(localStorage.getItem('morello_last_app') || 0);
+document.addEventListener('mousemove', e=>{const bg=document.getElementById('heroBg'); const x=(e.clientX/window.innerWidth-.5)*10; const y=(e.clientY/window.innerHeight-.5)*8; bg.style.transform=`translate(${x}px,${y}px) scale(1.035)`;});
+const input=document.getElementById('screenshots'), info=document.getElementById('fileInfo');
+input.addEventListener('change',()=>{let files=[...input.files]; if(files.length>3){alert('Максимум 3 скриншота'); input.value=''; info.textContent=''; return;} let bad=files.find(f=>f.size>4*1024*1024); if(bad){alert('Один файл больше 4 МБ. Сожми скриншот или выбери другой.'); input.value=''; info.textContent=''; return;} info.textContent=files.length?('Выбрано: '+files.map(f=>f.name).join(', ')):'';});
+document.getElementById('joinForm').addEventListener('submit', async (e)=>{e.preventDefault(); const status=document.getElementById('status'); if(Date.now()-lastSent<5*60*1000){status.textContent='Антиспам: заявку можно отправлять раз в 5 минут.'; return;} const fd=new FormData(e.target); if(fd.get('website')) return; status.textContent='Отправляю заявку...'; try{const r=await fetch(WORKER_URL,{method:'POST',body:fd}); const data=await r.json().catch(()=>({})); if(!r.ok||!data.success) throw new Error(data.error||'Ошибка отправки'); localStorage.setItem('morello_last_app',Date.now()); lastSent=Date.now(); e.target.reset(); info.textContent=''; status.textContent='Заявка отправлена. Руководство семьи скоро свяжется с тобой.';}catch(err){status.textContent='Не удалось отправить заявку. Проверь Worker или попробуй позже.'; console.error(err);}});
+</script>
+</body>
+</html>
