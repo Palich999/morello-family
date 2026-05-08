@@ -16,10 +16,116 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;ba
 .slogan-panel{position:absolute;z-index:3;left:28px;top:285px;width:min(380px,84vw);padding:24px 28px;border:1px solid var(--line);border-radius:16px;background:rgba(0,0,0,.52);box-shadow:inset 0 0 45px rgba(215,169,85,.06),0 22px 60px rgba(0,0,0,.55);backdrop-filter:blur(4px)}.srow{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:center;margin:18px 0}.ico{font-size:31px;color:var(--gold2);filter:drop-shadow(0 0 8px rgba(255,200,95,.35))}.srow b{color:#f1cd81}.hero-cards{position:absolute;z-index:3;left:38px;right:38px;bottom:100px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.hcard,.card{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(15,12,9,.88),rgba(5,5,4,.86));box-shadow:inset 0 0 35px rgba(215,169,85,.05),0 16px 48px rgba(0,0,0,.35)}.hcard{padding:24px 28px;display:grid;grid-template-columns:62px 1fr;gap:16px;align-items:center}.hcard .bigico{font-size:42px;color:var(--gold)}h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:4px;color:#e7b965;margin:0 0 12px}.hero-actions{position:absolute;z-index:4;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:18px}.btn.red{background:linear-gradient(180deg,#a52217,#5a0b07);border-color:#d2392a;color:#ffe2ad}.btn.big{font-size:22px;padding:16px 38px}.section{margin-top:18px;display:grid;gap:18px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:26px}.about p{line-height:1.75;margin:0;color:#ddc69e}.ranks{display:grid;gap:8px}.rank{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid rgba(215,169,85,.18)}.rank span:first-child{font-family:'Oswald';color:#ffd37b;font-size:22px}.promo{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center}.promo img{width:100%;max-height:360px;object-fit:contain;filter:drop-shadow(0 0 30px rgba(255,176,44,.18))}.empty-gallery{min-height:210px;display:grid;place-items:center;text-align:center;border:1px dashed rgba(215,169,85,.45);border-radius:18px;background:rgba(0,0,0,.35);color:#bfa77c}.req li{margin:12px 0}.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-family:'Oswald';letter-spacing:1.5px;color:#e8c47e}input,textarea{width:100%;border:1px solid rgba(215,169,85,.38);border-radius:10px;background:#090807;color:#f5ddb2;padding:13px 14px;font:16px 'Roboto Slab',serif;outline:none}textarea{min-height:110px;resize:vertical}input:focus,textarea:focus{border-color:#ffd38a;box-shadow:0 0 0 3px rgba(215,169,85,.12)}.filebox{border:1px dashed rgba(215,169,85,.55);border-radius:12px;padding:16px;background:rgba(0,0,0,.26)}.note{font-size:14px;color:#bda47c;line-height:1.6}.status{margin-top:12px;color:#ffd38a;min-height:24px}.footer{text-align:center;color:#9d855d;padding:26px}.hidden-field{position:absolute;left:-9999px;opacity:0}
 @media(max-width:950px){.nav{position:relative;flex-direction:column}.links{justify-content:center}.hero{min-height:760px}.slogan-panel{left:16px;right:16px;top:230px;width:auto}.hero-cards{grid-template-columns:1fr;bottom:120px;left:16px;right:16px}.hcard{padding:14px}.grid2,.grid3,.form,.promo{grid-template-columns:1fr}.hero-actions{bottom:20px;flex-direction:column;width:86%;}.btn.big{text-align:center;font-size:18px}.brand{font-size:22px}.hero-bg{background-position:center top}}
 @media(max-width:620px){.hero{min-height:880px}.slogan-panel{top:210px}.hero-cards{bottom:150px}.links a{padding:9px 14px;font-size:14px}.page{width:98vw}.card{padding:18px}}
+
+/* MORELLO VFX UPGRADE */
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:
+      radial-gradient(circle at 50% 45%,rgba(128,80,23,.24),transparent 28%),
+      linear-gradient(180deg,#020202,#090604 55%,#020202);
+    overflow:hidden;
+    animation:introFade 4.6s ease forwards;
+}
+.intro-smoke{
+    position:absolute;
+    inset:-20%;
+    background:
+      radial-gradient(circle at 25% 65%,rgba(255,226,160,.11),transparent 24%),
+      radial-gradient(circle at 72% 35%,rgba(255,255,255,.08),transparent 28%),
+      radial-gradient(circle at 50% 50%,rgba(215,169,85,.08),transparent 38%);
+    filter:blur(22px);
+    animation:introSmoke 5s ease-in-out infinite alternate;
+}
+.intro-logo{
+    position:relative;
+    z-index:1;
+    font-family:'Oswald',sans-serif;
+    font-size:clamp(62px,11vw,150px);
+    line-height:.9;
+    letter-spacing:14px;
+    color:#e7bd70;
+    text-shadow:0 0 12px #000,0 0 32px rgba(231,189,112,.62);
+    animation:introLogo 2.2s ease-in-out infinite alternate;
+}
+.intro-sub{
+    position:relative;
+    z-index:1;
+    margin-top:22px;
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    color:#f2d6a0;
+    opacity:.86;
+}
+@keyframes introFade{0%,72%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+@keyframes introLogo{from{transform:scale(1);filter:brightness(1)}to{transform:scale(1.035);filter:brightness(1.14)}}
+@keyframes introSmoke{from{transform:translate(-2%,2%) scale(1)}to{transform:translate(3%,-2%) scale(1.08)}}
+
+.smoke-a,.smoke-b{
+    background:
+      radial-gradient(circle at 18% 72%,rgba(255,225,170,.10),transparent 24%),
+      radial-gradient(circle at 82% 28%,rgba(255,255,255,.07),transparent 28%),
+      radial-gradient(circle at 50% 55%,rgba(215,169,85,.055),transparent 42%);
+    filter:blur(20px);
+    opacity:.72;
+    mix-blend-mode:screen;
+}
+.smoke-a{animation:morelloSmokeA 38s ease-in-out infinite alternate}
+.smoke-b{animation:morelloSmokeB 52s ease-in-out infinite alternate;opacity:.45;filter:blur(28px)}
+.gold-dust{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:2;
+    opacity:.22;
+    background-image:
+      radial-gradient(circle,rgba(255,216,140,.45) 0 1px,transparent 2px),
+      radial-gradient(circle,rgba(255,255,255,.22) 0 1px,transparent 2px);
+    background-size:130px 130px,210px 210px;
+    animation:goldDustMove 34s linear infinite;
+}
+@keyframes morelloSmokeA{from{transform:translate3d(-4%,2%,0) scale(1)}to{transform:translate3d(5%,-3%,0) scale(1.12)}}
+@keyframes morelloSmokeB{from{transform:translate3d(4%,-2%,0) scale(1.08)}to{transform:translate3d(-5%,3%,0) scale(1)}}
+@keyframes goldDustMove{to{transform:translateY(-160px)}}
+
+.nav,.hcard,.card,.rank,.empty-gallery,.promo img,.brand,.brand-mark,.links a,.btn,input,textarea{
+    transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease,filter .35s ease,color .35s ease,background .35s ease;
+}
+.card:hover,.hcard:hover,.empty-gallery:hover{
+    transform:translateY(-6px) scale(1.01);
+    border-color:rgba(255,216,140,.64);
+    box-shadow:0 0 26px rgba(215,169,85,.18),0 22px 55px rgba(0,0,0,.52),inset 0 0 42px rgba(215,169,85,.07);
+}
+.rank:hover{
+    transform:translateX(8px);
+    color:#fff1c6;
+    border-color:rgba(255,216,140,.38);
+}
+.rank:hover span:first-child{filter:drop-shadow(0 0 10px rgba(255,211,123,.55))}
+.brand:hover .brand-mark,.hero:hover ~ .brand-mark{filter:drop-shadow(0 0 18px rgba(255,211,123,.6))}
+.promo img:hover{transform:scale(1.04) rotate(-1deg);filter:drop-shadow(0 0 38px rgba(255,176,44,.30)) brightness(1.06)}
+input:hover,textarea:hover{border-color:rgba(255,216,140,.7)}
+
+@media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+    #intro{display:none!important}
+}
+
 </style>
 </head>
 <body>
-<div class="smoke"></div><div class="ash"></div>
+<div id="intro" aria-hidden="true">
+  <div class="intro-smoke"></div>
+  <div class="intro-logo">MORELLO</div>
+  <div class="intro-sub">Верность. Влияние. Уважение.</div>
+</div>
+<div class="smoke smoke-a"></div><div class="smoke smoke-b"></div><div class="ash"></div><div class="gold-dust"></div>
 <main class="page">
 <nav class="nav">
   <div class="brand"><div class="brand-mark">M</div><div>Morello Family</div></div>
@@ -70,7 +176,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;ba
 <script>
 const WORKER_URL = 'https://morello-applications.zosimov9706.workers.dev';
 let lastSent = Number(localStorage.getItem('morello_last_app') || 0);
-document.addEventListener('mousemove', e=>{const bg=document.getElementById('heroBg'); const x=(e.clientX/window.innerWidth-.5)*10; const y=(e.clientY/window.innerHeight-.5)*8; bg.style.transform=`translate(${x}px,${y}px) scale(1.035)`;});
+document.addEventListener('mousemove', e=>{const bg=document.getElementById('heroBg'); const x=(e.clientX/window.innerWidth-.5)*10; const y=(e.clientY/window.innerHeight-.5)*8; if(bg) bg.style.transform=`translate(${x}px,${y}px) scale(1.035)`; document.querySelectorAll('.smoke-a,.smoke-b').forEach((s,i)=>{s.style.marginLeft=(x*(i?-.7:.7))+'px';s.style.marginTop=(y*(i?-.7:.7))+'px';});});
 const input=document.getElementById('screenshots'), info=document.getElementById('fileInfo');
 input.addEventListener('change',()=>{let files=[...input.files]; if(files.length>3){alert('Максимум 3 скриншота'); input.value=''; info.textContent=''; return;} let bad=files.find(f=>f.size>4*1024*1024); if(bad){alert('Один файл больше 4 МБ. Сожми скриншот или выбери другой.'); input.value=''; info.textContent=''; return;} info.textContent=files.length?('Выбрано: '+files.map(f=>f.name).join(', ')):'';});
 document.getElementById('joinForm').addEventListener('submit', async (e)=>{e.preventDefault(); const status=document.getElementById('status'); if(Date.now()-lastSent<5*60*1000){status.textContent='Антиспам: заявку можно отправлять раз в 5 минут.'; return;} const fd=new FormData(e.target); if(fd.get('website')) return; status.textContent='Отправляю заявку...'; try{const r=await fetch(WORKER_URL,{method:'POST',body:fd}); const data=await r.json().catch(()=>({})); if(!r.ok||!data.success) throw new Error(data.error||'Ошибка отправки'); localStorage.setItem('morello_last_app',Date.now()); lastSent=Date.now(); e.target.reset(); info.textContent=''; status.textContent='Заявка отправлена. Руководство семьи скоро свяжется с тобой.';}catch(err){status.textContent='Не удалось отправить заявку. Проверь Worker или попробуй позже.'; console.error(err);}});
